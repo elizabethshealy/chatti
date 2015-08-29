@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    <title>Chatti</title>
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+
+  </head>
+
+  <body>
+
+      <h1>Enter your command below</h1>
+
+      <script type="text/template" class="template">
+
+        <div class="display-command-info">
+          <img src="<%- m.avatar_url %>" class="avatar">
+          <ul>
+            <li class="name"> <%- m.name %> </li>
+            <li class="public-repos">
+              Public Repos: <%- m.public_repos %>
+            </li>
+            <li class="followers">
+              Followers:  <%- m.followers %>
+            </li>
+          </ul>
+        </div>
+
+      </script>
+
+		<div class="div-result">
+
+		</div>
+
+    <form>
+      <input type="text" class="enter-command" placeholder="  type here"></input>
+      <input type="submit" value="submit" class="submit-button"></input>
+    </form>
+
+
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type=text/javascript src="js/underscore.js"></script>
+  <script type=text/javascript src="js/chatti.js"></script>
+
+</html>
