@@ -30,54 +30,6 @@ $(function () {
 
       tempFunction(input, renderFunction);
 
-    } else if (command === "@gh") {
-      //gh-pages
-
-      var name = input.slice(4);
-      console.log (name);
-
-      $.ajax ({
-        dataType: 'json',
-        url: 'https://api.github.com/users/' + name,
-        method: 'GET',
-      }).done(function (data) {
-      $('div.div-result').append(data.name + '</span>' + '<img src="' + data.avatar_url + '">' + '</div></li>');
-      }).fail(function (request, status, err) {
-        console.log(arguments);
-      });
-
-    } else if (command === "@spanish") {
-
-      var spanword = input.slice(9);
-      console.log (spanword);
-
-      $.ajax ({
-        dataType: 'jsonp',
-        url: 'https://www.glosbe.com/gapi/translate?from=eng&dest=spa&format=json&phrase=' + spanword + '&pretty=true',
-        method: 'GET',
-      }).done(function (data) {
-      var translationWord = data.tuc[0].phrase.text;
-      $('div.div-result').append(translationWord);
-      }).fail(function (request, status, err) {
-        console.log(arguments);
-      });
-
-    } else if (command === "@french") {
-
-      var spanword = input.slice(8);
-      console.log (spanword);
-
-      $.ajax ({
-        dataType: 'jsonp',
-        url: 'https://www.glosbe.com/gapi/translate?from=eng&dest=fra&format=json&phrase=' + spanword + '&pretty=true',
-        method: 'GET',
-      }).done(function (data) {
-      var translationWord = data.tuc[0].phrase.text;
-      $('div.div-result').append(translationWord);
-      }).fail(function (request, status, err) {
-        console.log(arguments);
-      });
-
     } else {
 
     }
