@@ -1,0 +1,3 @@
+talkOutput(input);
+formatBubbleLeft();
+searchAPI();
